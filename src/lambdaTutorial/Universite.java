@@ -1,28 +1,33 @@
 package lambdaTutorial;
 
 public class Universite {
-
     /*
-TASK :
-fields --> Universite (String)
-           bolum (String)
-           ogrcSayisi (int)
-           notOrt (int)
-           olan POJO clas craete edip main method içinde 5 arklı obj'den List create ediniz.
- */
+    TASK :
+    fields --> Universite (String)
+               bolum (String)
+               ogrcSayisi (int)
+               notOrt (int)
+               olan POJO clas craete edip main method içinde 5 arklı obj'den List create ediniz.
+               pojo class: plan old java object --> model classı
 
-   private String universite;
-   private String bolum;
-   private int ogreniSayisi;
+               private veriable
+               constructor
+               getter setter
+               toString
+     */
+
+   private String  universite;
+   private String  bolum;
+   private int ogrSayisi;
    private int notOrt;
 
-   public Universite(){
-   }
+    public Universite(){
+    }
 
-    public Universite(String universite, String bolum, int ogreniSayisi, int notOrt) {
+    public Universite(String universite, String bolum, int ogrSayisi, int notOrt) {
         this.universite = universite;
         this.bolum = bolum;
-        this.ogreniSayisi = ogreniSayisi;
+        this.ogrSayisi = ogrSayisi;
         this.notOrt = notOrt;
     }
 
@@ -42,12 +47,12 @@ fields --> Universite (String)
         this.bolum = bolum;
     }
 
-    public int getOgreniSayisi() {
-        return ogreniSayisi;
+    public int getOgrSayisi() {
+        return ogrSayisi;
     }
 
-    public void setOgreniSayisi(int ogreniSayisi) {
-        this.ogreniSayisi = ogreniSayisi;
+    public void setOgrSayisi(int ogrSayisi) {
+        this.ogrSayisi = ogrSayisi;
     }
 
     public int getNotOrt() {
@@ -60,11 +65,11 @@ fields --> Universite (String)
 
     @Override
     public String toString() {
-        return "Universite{" +
+        return
                 "universite='" + universite + '\'' +
                 ", bolum='" + bolum + '\'' +
-                ", ogreniSayisi=" + ogreniSayisi +
+                ", ogrSayisi=" + ogrSayisi +
                 ", notOrt=" + notOrt +
-                '}';
+               "\n";
     }
 }

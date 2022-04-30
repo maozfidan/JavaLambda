@@ -127,7 +127,7 @@ public class Lambda03 {
                     stream().
                     noneMatch(t -> t.startsWith("w")) ? "agam w ile başlayan yemahh olu mu ?" :
                     "agam  wenemen ne menen bi şey  ?");
-
+        //noneMatch() --> hic bir sarti SAGLAMAZSA true en az bir eleman sarti SAGLARSA false return eder.
         }
 
 
@@ -141,7 +141,7 @@ public class Lambda03 {
                 stream().
                 anyMatch(t -> t.endsWith("x")) ? "agam senden bir  cacix olmaz  ?" :
                 "agam senin aradigin yemek bu torpaklarda yooogggg");
-
+        //anyMatch() --> enaz bir eleman sarti saglarsa true aksi durumda false return eder
     }
 
         // Task : Karakter sayisi en buyuk elemani yazdiriniz.
