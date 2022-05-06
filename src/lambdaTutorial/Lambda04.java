@@ -65,7 +65,7 @@ public class Lambda04 {
     public static boolean ogrcSayisi110AzMi(List<Universite> unv) {
         return unv.
                 stream().
-                allMatch(t -> t.getOgreniSayisi() > 110);
+                allMatch(t -> t.getOgrSayisi() > 110);
     }
     //task 03-->universite'lerde herhangi birinde "matematik" olup olmadigini  kontrol eden pr create ediniz.
 
@@ -78,14 +78,14 @@ public class Lambda04 {
     public static List<Universite> ogrSayiBkSirala(List<Universite> unv) {
         return unv.
                 stream().
-                sorted(Comparator.comparing(Universite::getOgreniSayisi).reversed()).
+                sorted(Comparator.comparing(Universite::getOgrSayisi).reversed()).
                 collect(Collectors.toList());
     }
 
     public static void ogrSayiBkSiralaVoid(List<Universite> unv) {
         System.out.println(unv.
                 stream().
-                sorted(Comparator.comparing(Universite::getOgreniSayisi).reversed()).
+                sorted(Comparator.comparing(Universite::getOgrSayisi).reversed()).
                 collect(Collectors.toList()));//collect()->akısdaki elamanları istenen sarta gore toplar
         //Collectors.toList()->collect'e toplanan elemanlari list'e cevirir
     }
@@ -106,7 +106,7 @@ public class Lambda04 {
     public static List<Universite> enAzOgrcSaysi2Unv(List<Universite> unv) {
         return unv.
                 stream().
-                sorted(Comparator.comparing(Universite::getOgreniSayisi)).
+                sorted(Comparator.comparing(Universite::getOgrSayisi)).
                 limit(2).
                 skip(1).
                 collect(Collectors.toList());
@@ -118,7 +118,7 @@ public class Lambda04 {
         return unv.
                 stream().
                 filter(t -> t.getNotOrt() > 63).
-                map(t -> t.getOgreniSayisi()).
+                map(t -> t.getOgrSayisi()).
                 // reduce(Integer::sum);
                 // reduce(Math::addExact);
                         reduce(0, (t, u) -> t + u);
@@ -129,7 +129,7 @@ public class Lambda04 {
         return unv.
                 stream().
                 filter(t -> t.getNotOrt() > 63).
-                mapToInt(t -> t.getOgreniSayisi()).
+                mapToInt(t -> t.getOgrSayisi()).
                 sum();
         // mapToInt() --> bu method akısdaki elemanların data type'nı
         // parameterisindeki() degere göre Int data type update eder
@@ -141,7 +141,7 @@ public class Lambda04 {
 
         return unv.
                 stream().
-                filter(t -> t.getOgreniSayisi() > 333).
+                filter(t -> t.getOgrSayisi() > 333).
                 mapToDouble(t -> t.getNotOrt()).//
                         average();//akısdakş elamnalrın ortlaması alındı
         // mapToDouble() --> bu method akısdaki elemanların data type'nı
@@ -163,7 +163,7 @@ public class Lambda04 {
     public static OptionalInt ogrcSayisi571BykMaxNotort(List<Universite> unv) {
         return unv.
                 stream().//akıs
-                        filter(t -> t.getOgreniSayisi() > 571).//unv obj akısı fittrelendi
+                        filter(t -> t.getOgrSayisi() > 571).//unv obj akısı fittrelendi
                         mapToInt(t -> t.getNotOrt()).//akısdaki unv obj notOrt akısı olarak update edildi
                         max();   //akısın en byk degerini return eder
 
@@ -173,7 +173,7 @@ public class Lambda04 {
     public static OptionalInt ogrcSayisi1071AzMinnotOrt(List<Universite> unv) {
       return   unv.
               stream().
-              filter(t->t.getOgreniSayisi()<1071).
+              filter(t->t.getOgrSayisi()<1071).
               mapToInt(t->t.getNotOrt()).
               min();
 
